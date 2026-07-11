@@ -114,11 +114,9 @@ const hamburger = document.getElementById('hamburgerBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 hamburger.addEventListener('click', () => {
   mobileMenu.classList.toggle('active');
-  // Toggle icon between ☰ and ✕
   hamburger.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
 });
 
-// Close mobile menu on link click
 document.querySelectorAll('.mobile-link').forEach(link => {
   link.addEventListener('click', () => {
     mobileMenu.classList.remove('active');
@@ -126,7 +124,7 @@ document.querySelectorAll('.mobile-link').forEach(link => {
   });
 });
 
-// Smooth scroll for desktop nav links (they're already anchors)
+// Smooth scroll for desktop nav links
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', (e) => {
     const href = link.getAttribute('href');
@@ -137,7 +135,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
   });
 });
 
-// === 50 Features Data & Logic ===
+// === 50 Features Data & Modal Logic ===
 const fiftyFeatures = [
   { id:1, group:"neuro", icon:"🧠", title:"Neuro-Sync Dashboard", desc:"پانێلەکا ڕاستەوخۆ یا پێلێت مێشکی دەمێ فێربوونێ.", longDesc: "تە دشێی چالاکیا مێشکێ خۆ ب شێوەیەکێ ڕاستەوخۆ ببینی: پێلێت Alpha, Beta, Theta, Gamma. دەمێ تە بالڤەدایی، سیستەم هەستیار دبیت و تە ئاگادار دکەت." },
   { id:2, group:"neuro", icon:"🎯", title:"Focus Guardian", desc:"دەمێ بالڤەدایی، دەرسێ ڕادوەستینیت و مینی-بڕێکا ئارامبوونێ ددەت.", longDesc: "ئەگەر مێشکێ تە ژ دەرسێ دوورکەڤیت، Focus Guardian دەرسێ ڕادوەستینیت و چەند خولەکەکا میدیتەیشنێ پێشکێش دکەت دا دیسان بالڤەدایی بیت." },
@@ -218,7 +216,6 @@ function renderFeatures(filter = 'all', count = visibleCount) {
     loadMoreBtn.style.display = 'none';
   }
 
-  // Add click event to open modal
   document.querySelectorAll('.feature-card-fifty').forEach(card => {
     card.addEventListener('click', () => {
       const id = parseInt(card.dataset.id);
