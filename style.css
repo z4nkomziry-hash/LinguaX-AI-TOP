@@ -358,7 +358,6 @@ body.dark-mode .icon-moon { display: inline; }
   font-size: 1.2rem;
 }
 
-/* Filter Bar */
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -386,7 +385,6 @@ body.dark-mode .icon-moon { display: inline; }
   box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
 }
 
-/* Grid */
 .features-grid-fifty {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -394,7 +392,6 @@ body.dark-mode .icon-moon { display: inline; }
   perspective: 800px;
 }
 
-/* Feature Card */
 .feature-card-fifty {
   background: var(--surface-light);
   box-shadow: var(--shadow-light);
@@ -459,7 +456,6 @@ body.dark-mode .icon-moon { display: inline; }
   line-height: 1.5;
 }
 
-/* Load More */
 .load-more-container {
   text-align: center;
   margin-top: 2.5rem;
@@ -468,7 +464,6 @@ body.dark-mode .icon-moon { display: inline; }
   padding: 0.8rem 2.5rem;
 }
 
-/* Animations */
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -476,7 +471,6 @@ body.dark-mode .icon-moon { display: inline; }
   }
 }
 
-/* Responsive */
 @media (max-width: 600px) {
   .filter-btn { padding: 0.5rem 1rem; font-size: 0.8rem; }
 }
@@ -529,7 +523,6 @@ body.dark-mode .icon-moon { display: inline; }
   padding-top: 1rem;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .hero-title { font-size: 2.5rem; }
   .globe-container { height: 350px; }
