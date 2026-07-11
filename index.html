@@ -18,18 +18,30 @@
         <span class="logo-icon">🌐</span>
         <span class="logo-text">LinguaX<span class="highlight">-Ai</span></span>
       </a>
-      <nav class="nav-links">
-        <a href="#plans" class="nav-link">پلان</a>
+      <nav class="nav-links" id="navLinks">
         <a href="#features" class="nav-link">تایبەتمەندی</a>
+        <a href="#plans" class="nav-link">پلان</a>
         <a href="#fifty-features" class="nav-link">٥٠ خاڵ</a>
-        <a href="#" class="nav-link">دەربارە</a>
+        <a href="#cta" class="nav-link">دەعوەت</a>
         <button id="theme-toggle" class="btn-icon" aria-label="گۆڕینی مۆد">
           <span class="icon-sun">☀️</span>
           <span class="icon-moon">🌙</span>
         </button>
         <button class="btn-primary btn-sm">دەستپێکە</button>
       </nav>
-      <button class="hamburger" aria-label="مینو">☰</button>
+      <button class="hamburger" id="hamburgerBtn" aria-label="مینو">☰</button>
+    </div>
+    <!-- مینۆیێ مۆبایلێ -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#features" class="mobile-link">تایبەتمەندی</a>
+      <a href="#plans" class="mobile-link">پلان</a>
+      <a href="#fifty-features" class="mobile-link">٥٠ خاڵ</a>
+      <a href="#cta" class="mobile-link">دەعوەت</a>
+      <button id="theme-toggle-mobile" class="btn-icon mobile-theme-btn" aria-label="گۆڕینی مۆد">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+      </button>
+      <button class="btn-primary btn-block mobile-start-btn">دەستپێکە</button>
     </div>
   </header>
 
@@ -44,12 +56,10 @@
       </p>
       <div class="hero-buttons">
         <button class="btn-primary btn-lg">بەلاش دەستپێکە</button>
-        <button class="btn-outline btn-lg">پلانێت مە بینە</button>
+        <button class="btn-outline btn-lg" onclick="document.getElementById('plans').scrollIntoView({behavior:'smooth'})">پلانێت مە بینە</button>
       </div>
     </div>
-    <div class="globe-container" id="globe-container">
-      <!-- 3D Globe dê bi JavaScript were barkirin -->
-    </div>
+    <div class="globe-container" id="globe-container"></div>
     <div class="floating-avatars">
       <div class="avatar a1">🤖</div>
       <div class="avatar a2">🗣️</div>
@@ -97,7 +107,7 @@
           <li>✅ AI Tutor سنووردار (١٠ هەول/ڕۆژ)</li>
           <li>✅ دەستپێکرنا زمانەکێ</li>
           <li>✅ یارییێت سادە</li>
-          <li>❌ بێ ریکلامێت ڤیدیۆیی</li>
+          <li>❌ ریکلامێت ڤیدیۆیی</li>
         </ul>
         <button class="btn-primary btn-block">بەلاش دەستپێکە</button>
       </div>
@@ -137,7 +147,7 @@
   <!-- سێکشنا ٥٠ خاڵێت شۆڕشگێر -->
   <section id="fifty-features" class="fifty-features">
     <h2 class="section-title">٥٠ خاڵێت <span class="gradient-text">شۆڕشگێر</span> کو کەسێ نەدیتینە</h2>
-    <p class="section-subtitle">هەر خالەک پەنجەرەیەکە بۆ ئایندەیا فێربوونێ. پێداگرتنەکا تایبەت بۆ هەر زمانەکێ.</p>
+    <p class="section-subtitle">هەر خالەک پەنجەرەیەکە بۆ ئایندەیا فێربوونێ. کلیک ل سەر کارتان بکەن بۆ زانیاریێت بەرفرەهتر.</p>
 
     <div class="filter-bar">
       <button class="filter-btn active" data-filter="all">هەمی</button>
@@ -153,12 +163,12 @@
     <div class="features-grid-fifty" id="featuresGrid"></div>
 
     <div class="load-more-container">
-      <button id="loadMoreBtn" class="btn-outline">زێدەتر نیشاندە (٢٠+ چالاک)</button>
+      <button id="loadMoreBtn" class="btn-outline">زێدەتر نیشاندە</button>
     </div>
   </section>
 
   <!-- سێکشنا دەعوەت -->
-  <section class="cta">
+  <section id="cta" class="cta">
     <div class="cta-content neumorph-inset">
       <h2>ئامادەی بۆ شۆڕشا فێربوونا زمانان؟</h2>
       <p>ئەمڕۆ بەشدار بە و ببنە خێزانەکا زمانڤانان یا جیهانی.</p>
@@ -187,6 +197,17 @@
     </div>
     <p class="copyright">© 2026 LinguaX-Ai. هەموو مافێت پاراستی.</p>
   </footer>
+
+  <!-- مۆدالا بەرفرەهی یا ٥٠ خالان -->
+  <div class="modal-overlay" id="featureModal">
+    <div class="modal-content neumorph">
+      <button class="modal-close" id="closeModal">&times;</button>
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <button class="btn-primary" id="modalActionBtn">چالاک بکە</button>
+    </div>
+  </div>
 
   <!-- Three.js CDN -->
   <script type="importmap">
