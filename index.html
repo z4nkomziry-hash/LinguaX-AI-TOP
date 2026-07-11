@@ -39,6 +39,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="light-mode">
+  
   <!-- ناڤبارا شووشەیی -->
   <header class="navbar glass">
     <div class="nav-container">
@@ -46,46 +47,79 @@
         <span class="logo-icon">🌐</span>
         <span class="logo-text">LinguaX<span class="highlight">-Ai</span></span>
       </a>
+      
       <nav class="nav-links" id="navLinks">
-        <a href="#features" class="nav-link">تایبەتمەندی</a>
-        <a href="#plans" class="nav-link">پلان</a>
-        <a href="#fifty-features" class="nav-link">٥٠ خاڵ</a>
-        <a href="#blog" class="nav-link">بلۆگ</a>
-        <a href="#cta" class="nav-link">دەعوەت</a>
+        <a href="#features" class="nav-link" data-i18n="nav-features">تایبەتمەندی</a>
+        <a href="#plans" class="nav-link" data-i18n="nav-plans">پلان</a>
+        <a href="#fifty-features" class="nav-link" data-i18n="nav-fifty">٥٠ خاڵ</a>
+        <a href="#blog" class="nav-link" data-i18n="nav-blog">بلۆگ</a>
+        <a href="#cta" class="nav-link" data-i18n="nav-cta">دەعوەت</a>
+        
         <button id="theme-toggle" class="btn-icon" aria-label="گۆڕینی مۆد">
           <span class="icon-sun">☀️</span>
           <span class="icon-moon">🌙</span>
         </button>
-        <button class="btn-primary btn-sm">دەستپێکە</button>
+
+        <!-- کۆنترۆڵا زمان و ئەکاونتی -->
+        <div class="nav-controls">
+          <select id="lang-selector" class="lang-select">
+            <option value="ku-badini" selected>کوردی (بەهدینی)</option>
+            <option value="ku-sorani">کوردی (سۆرانی)</option>
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+            <option value="tr">Türkçe</option>
+            <option value="de">Deutsch</option>
+            <option value="fa">فارسی</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="zh">中文</option>
+          </select>
+          <div id="user-profile-zone" class="user-profile-zone">
+            <button id="auth-btn" class="btn-primary btn-sm" data-i18n="btn-login">چوونەژوور</button>
+          </div>
+        </div>
       </nav>
       <button class="hamburger" id="hamburgerBtn" aria-label="مینو">☰</button>
     </div>
+
+    <!-- مینویا مۆبایلێ -->
     <div class="mobile-menu" id="mobileMenu">
-      <a href="#features" class="mobile-link">تایبەتمەندی</a>
-      <a href="#plans" class="mobile-link">پلان</a>
-      <a href="#fifty-features" class="mobile-link">٥٠ خاڵ</a>
-      <a href="#blog" class="mobile-link">بلۆگ</a>
-      <a href="#cta" class="mobile-link">دەعوەت</a>
-      <button id="theme-toggle-mobile" class="btn-icon mobile-theme-btn" aria-label="گۆڕینی مۆد">
-        <span class="icon-sun">☀️</span>
-        <span class="icon-moon">🌙</span>
-      </button>
-      <button class="btn-primary btn-block mobile-start-btn">دەستپێکە</button>
+      <a href="#features" class="mobile-link" data-i18n="nav-features">تایبەتمەندی</a>
+      <a href="#plans" class="mobile-link" data-i18n="nav-plans">پلان</a>
+      <a href="#fifty-features" class="mobile-link" data-i18n="nav-fifty">٥٠ خاڵ</a>
+      <a href="#blog" class="mobile-link" data-i18n="nav-blog">بلۆگ</a>
+      <a href="#cta" class="mobile-link" data-i18n="nav-cta">دەعوەت</a>
+      
+      <div class="mobile-controls-row">
+        <select id="lang-selector-mobile" class="lang-select">
+          <option value="ku-badini" selected>کوردی (بەهدینی)</option>
+          <option value="ku-sorani">کوردی (سۆرانی)</option>
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+        </select>
+        <button id="theme-toggle-mobile" class="btn-icon" aria-label="گۆڕینی مۆد">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+      </div>
+      <div id="user-profile-zone-mobile" class="user-profile-zone">
+        <button id="auth-btn-mobile" class="btn-primary btn-block mobile-start-btn" data-i18n="btn-login">چوونەژوور</button>
+      </div>
     </div>
   </header>
 
-  <!-- سێکشنا هێرۆ + 3D Globe -->
+  <!-- سێکشنا هێرۆ -->
   <section class="hero">
     <div class="hero-content">
-      <h1 class="hero-title">
+      <h1 class="hero-title" data-i18n="hero-title">
         زمانان <span class="gradient-text">ب ئاستێ لوتکەیی</span> فێربە
       </h1>
-      <p class="hero-desc">
+      <p class="hero-desc" data-i18n="hero-desc">
         ئەزموونەکا کەسایەتی کر یا فێربوونێ ب هاریکاریا AI-یێ پێشکەفتی. ژ Duolingo بلندتر، هەر زمان عالەمەک.
       </p>
       <div class="hero-buttons">
-        <button class="btn-primary btn-lg">بەلاش دەستپێکە</button>
-        <button class="btn-outline btn-lg" onclick="document.getElementById('plans').scrollIntoView({behavior:'smooth'})">پلانێت مە بینە</button>
+        <button class="btn-primary btn-lg" data-i18n="hero-start">بەلاش دەستپێکە</button>
+        <button class="btn-outline btn-lg" id="viewPlansBtn" data-i18n="hero-view-plans">پلانێت مە بینە</button>
       </div>
     </div>
     <div class="globe-container" id="globe-container"></div>
@@ -96,87 +130,87 @@
     </div>
   </section>
 
-  <!-- سێکشنا تایبەتمەندیێت AI -->
+  <!-- سێکشنا تایبەتمەندیان -->
   <section id="features" class="features">
-    <h2 class="section-title">چی دکەت <span class="gradient-text">LinguaX-Ai</span> تایبەت؟</h2>
+    <h2 class="section-title" data-i18n="features-heading">چی دکەت <span class="gradient-text">LinguaX-Ai</span> تایبەت؟</h2>
     <div class="features-grid">
       <div class="feature-card neumorph">
         <div class="feature-icon">🧠</div>
         <h3>AI Tutor X</h3>
-        <p>مامۆستایەکێ AI-یێ تایبەت بۆ هەر قوتابیەکێ. صحبەتدکەت، شاشیا ڕاستدکەت، و ڕێبەرییا تە دکەت.</p>
+        <p data-i18n="f1-desc">مامۆستایەکێ AI-یێ تایبەت بۆ هەر قوتابیەکێ. صحبەتدکەت، شاشیا ڕاستدکەت، و ڕێبەرییا تە دکەت.</p>
       </div>
       <div class="feature-card neumorph">
         <div class="feature-icon">🎯</div>
         <h3>Adaptive Learning 3.0</h3>
-        <p>ئاست، شێوازێ فێربوونێ، دەمێ ئەدایێ باشتر، و تەنانەت رۆحێ تە یێ دەروونی دزانیت و خۆ ل گۆرەی وێ ڕێکدخەت.</p>
+        <p data-i18n="f2-desc">ئاست، شێوازێ فێربوونێ، دەمێ ئەدایێ باشتر، و تەنانەت رۆحێ تە یێ دەروونی دزانیت و خۆ ل گۆرەی وێ ڕێکدخەت.</p>
       </div>
       <div class="feature-card neumorph">
         <div class="feature-icon">✨</div>
         <h3>Generative Practice</h3>
-        <p>هەر وەرزشەک نەوی و ئۆریژینالە، ب AI-یێ بەرهەمهاتی. چیڕۆک، دیالۆگ، سیناریۆیێت واقعی.</p>
+        <p data-i18n="f3-desc">هەر وەرزشەک نەوی و ئۆریژینالە، ب AI-یێ بەرهەمهاتی. چیڕۆک، دیالۆگ، سیناریۆیێت واقعی.</p>
       </div>
       <div class="feature-card neumorph">
         <div class="feature-icon">🌍</div>
         <h3>Culture Lab</h3>
-        <p>زمان د ناڤ چاندێ دا – فیلم، موزیک، خوارن، یاری. پتر ژ ژبەرکرنەکا بێ ڕوح.</p>
+        <p data-i18n="f4-desc">زمان د ناڤ چاندێ دا – فیلم، موزیک, خوارن، یاری. پتر ژ ژبەرکرنەکا بێ ڕوح.</p>
       </div>
     </div>
   </section>
 
-  <!-- سێکشنا پلانێت بەلاش، پڵاس، پریمیوم -->
+  <!-- سێکشنا پلانان -->
   <section id="plans" class="plans">
-    <h2 class="section-title">پلانێت <span class="gradient-text">بهایێت گونجایی</span></h2>
+    <h2 class="section-title" data-i18n="plans-heading">پلانێت <span class="gradient-text">بهایێت گونجایی</span></h2>
     <div class="plans-grid">
-      <div class="plan-card neumorph">
-        <div class="plan-badge">بەلاش</div>
-        <h3>🆓 دەستپێکەر</h3>
+      <div class="plan-card neumorph" id="plan-free">
+        <div class="plan-badge" data-i18n="badge-free">بەلاش</div>
+        <h3 data-i18n="p1-title">🆓 دەستپێکەر</h3>
         <div class="price">0$ <span>/مانگ</span></div>
         <ul class="plan-features">
           <li>✅ ڕۆژانە ٣ دەرس</li>
           <li>✅ AI Tutor سنووردار (١٠ هەول/ڕۆژ)</li>
-          <li>✅ دەستپێکرنا زمانەکێ</li>
+          <li>✅ دەستپێکرna زمانەکێ</li>
           <li>✅ یارییێت سادە</li>
           <li>❌ ریکلامێت ڤیدیۆیی</li>
         </ul>
-        <button class="btn-primary btn-block">بەلاش دەستپێکە</button>
+        <button class="btn-primary btn-block" data-i18n="btn-start-free">بەلاش دەستپێکە</button>
       </div>
 
-      <div class="plan-card neumorph popular">
-        <div class="plan-badge popular-badge">پڕفرۆشترین</div>
-        <h3>⭐ Plus</h3>
+      <div class="plan-card neumorph popular" id="plan-plus">
+        <div class="plan-badge popular-badge" data-i18n="badge-popular">پڕفرۆشترین</div>
+        <h3 data-i18n="p2-title">⭐ Plus</h3>
         <div class="price">4.99$ <span>/مانگ</span></div>
         <ul class="plan-features">
           <li>✅ هەمی تایبەتمەندیێت بەلاش</li>
-          <li>✅ دەرس و وەرزش بێ سنوور</li>
-          <li>✅ AI Tutor بێ سنوور (دەمێ ڕاست)</li>
+          <li>✅ دەرس بێ سنوور</li>
+          <li>✅ AI Tutor بێ سنوور</li>
           <li>✅ ٣ زمانان هەمان دەم</li>
-          <li>✅ مۆدیێت تایبەت: گەشتا زمانی، کاروبار</li>
+          <li>✅ مۆدی گەشتا زمانی و کاروبار</li>
           <li>✅ بێ ریکلام</li>
         </ul>
-        <button class="btn-primary btn-block">Plus بگەهینە</button>
+        <button class="btn-primary btn-block" data-i18n="btn-upgrade-plus">Plus بگەهینە</button>
       </div>
 
-      <div class="plan-card neumorph">
-        <div class="plan-badge">پریمیوم</div>
-        <h3>👑 Premium</h3>
+      <div class="plan-card neumorph" id="plan-premium">
+        <div class="plan-badge" data-i18n="badge-premium">پریمیوم</div>
+        <h3 data-i18n="p3-title">👑 Premium</h3>
         <div class="price">9.99$ <span>/مانگ</span></div>
         <ul class="plan-features">
           <li>✅ هەمی تایبەتمەندیێت Plus</li>
           <li>✅ Human Coaching (ڤیدیۆ کۆڵ)</li>
-          <li>✅ زمانێت تایبەت (کوردی، عەرەبی ئەندەلوسی...)</li>
+          <li>✅ زمانێت کوردی و دەڤەرێ گشتی</li>
           <li>✅ Culture Lab تەواو</li>
-          <li>✅ بەلگەنامەیێت بەها (CEFR)</li>
+          <li>✅ بەلگەنامەیێت فەرمی (CEFR)</li>
         </ul>
-        <button class="btn-primary btn-block">Premium بگەهینە</button>
+        <button class="btn-primary btn-block" data-i18n="btn-upgrade-premium">Premium بگەهینە</button>
       </div>
     </div>
-    <p class="plans-note">💳 هەموو پلانان دەستپێکرنەکا ٧ ڕۆژان بێ بەرامبەر پێشکێشدکەن. هەر دەم پاشەکشێ بکە.</p>
+    <p class="plans-note" data-i18n="plans-note">💳 هەموو پلانان دەستپێکرنەکا ٧ ڕۆژان بێ بەرامبەر پێشکێشدکەن. هەر دەم پاشەکشێ بکە.</p>
   </section>
 
-  <!-- سێکشنا ٥٠ خاڵێت شۆڕشگێر -->
+  <!-- سێکشنا ٥٠ خاڵان -->
   <section id="fifty-features" class="fifty-features">
-    <h2 class="section-title">٥٠ خاڵێت <span class="gradient-text">شۆڕشگێر</span> کو کەسێ نەدیتینە</h2>
-    <p class="section-subtitle">هەر خالەک پەنجەرەیەکە بۆ ئایندەیا فێربوونێ. کلیک ل سەر کارتان بکەن بۆ زانیاریێت بەرفرەهتر.</p>
+    <h2 class="section-title" data-i18n="fifty-heading">٥٠ خاڵێت <span class="gradient-text">شۆڕشگێر</span> کو کەسێ نەدیتینە</h2>
+    <p class="section-subtitle" data-i18n="fifty-sub">هەر خالەک پەنجەرەیەکە بۆ ئایندەیا فێربوونێ. کلیک ل سەر کارتان بکەن بۆ زانیاریێت بەرفرەهتر.</p>
     <div class="filter-bar">
       <button class="filter-btn active" data-filter="all">هەمی</button>
       <button class="filter-btn" data-filter="neuro">🧠 NeuroLingua</button>
@@ -189,28 +223,28 @@
     </div>
     <div class="features-grid-fifty" id="featuresGrid"></div>
     <div class="load-more-container">
-      <button id="loadMoreBtn" class="btn-outline">زێدەتر نیشاندە</button>
+      <button id="loadMoreBtn" class="btn-outline" data-i18n="btn-load-more">زێدەتر نیشاندە</button>
     </div>
   </section>
 
   <!-- سێکشنا بلۆگێ -->
   <section id="blog" class="blog-preview">
-    <h2 class="section-title">نوچە و <span class="gradient-text">بابەتێت بلۆگێ</span></h2>
+    <h2 class="section-title" data-i18n="blog-heading">نوچە و <span class="gradient-text">بابەتێت بلۆگێ</span></h2>
     <div class="blog-grid">
       <article class="blog-card neumorph">
-        <h3>چاوا AI دێ فێربوونا زمانان بگوهۆڕیت</h3>
-        <p>ل سەر پلانێت ئایندەیێ فێربوونێ، تێکەلکرنا مێشک و AI دێ چ شۆڕشەکێ د فێربوونێدا ڕابکەت.</p>
-        <a href="#" class="blog-link">بخوینه ←</a>
+        <h3 data-i18n="b1-title">چاوا AI دێ فێربوونا زمانان بگوهۆڕیت</h3>
+        <p data-i18n="b1-desc">ل سەر پلانێت ئایندەیێ فێربوونێ، تێکەلکرنا مێشک و AI دێ چ شۆڕشەکێ د فێربوونێدا ڕابکەت.</p>
+        <a href="#" class="blog-link" data-i18n="blog-read">بخوینه ←</a>
       </article>
       <article class="blog-card neumorph">
-        <h3>بەراوردکرنا LinguaX-Ai و Duolingo</h3>
-        <p>کا کێ پتر بهایێتێ ددەت؟ بەراوردەکا ڕێک و پێک یا تایبەتمەندیان و بهایان.</p>
-        <a href="#" class="blog-link">بخوینه ←</a>
+        <h3 data-i18n="b2-title">بەراوردکرنا LinguaX-Ai و Duolingo</h3>
+        <p data-i18n="b2-desc">کا کێ پتر بهایێتێ ددەت؟ بەراوردەکا ڕێک و پێک یا تایبەتمەندیان و بهایان.</p>
+        <a href="#" class="blog-link" data-i18n="blog-read">بخوینه ←</a>
       </article>
       <article class="blog-card neumorph">
-        <h3>پێشکەفتنێت نووی یێت GenoLang</h3>
-        <p>تایبەتمەندیا مە یا DNA-یێ چاوا دێ ڕێیا فێربوونێ کەسایەتی کەت و هاریکاریا تە کەت.</p>
-        <a href="#" class="blog-link">بخوینه ←</a>
+        <h3 data-i18n="b3-title">پێشکەفتنێت نووی یێت GenoLang</h3>
+        <p data-i18n="b3-desc">تایبەتمەندیا مە یا DNA-یێ چاوا دێ ڕێیا فێربوونێ کەسایەتی کەت و هاریکاریا تە کەت.</p>
+        <a href="#" class="blog-link" data-i18n="blog-read">بخوینه ←</a>
       </article>
     </div>
   </section>
@@ -218,9 +252,9 @@
   <!-- سێکشنا دەعوەت -->
   <section id="cta" class="cta">
     <div class="cta-content neumorph-inset">
-      <h2>ئامادەی بۆ شۆڕشا فێربوونا زمانان؟</h2>
-      <p>ئەمڕۆ بەشدار بە و ببنە خێزانەکا زمانڤانان یا جیهانی.</p>
-      <button class="btn-primary btn-lg">بەلاش دەستپێکە</button>
+      <h2 data-i18n="cta-title">ئامادەی بۆ شۆڕشا فێربوونا زمانان?</h2>
+      <p data-i18n="cta-desc">ئەمڕۆ بەشدار بە و ببنە خێزانەکا زمانڤانان یا جیهانی.</p>
+      <button class="btn-primary btn-lg" data-i18n="hero-start">بەلاش دەستپێکە</button>
     </div>
   </section>
 
@@ -229,26 +263,38 @@
     <div class="footer-content">
       <div class="footer-col">
         <h3>LinguaX-Ai</h3>
-        <p>فێربوونا زمانان ب ئاستێ گۆپیتکی. ژ ٢٠٢٦ و پاشی.</p>
+        <p data-i18n="footer-tagline">فێربوونا زمانان ب ئاستێ گۆپیتکی. ژ ٢٠٢٦ و پاشی.</p>
       </div>
       <div class="footer-col">
-        <h4>گەهاندن</h4>
-        <a href="#">پلان</a>
-        <a href="#">تایبەتمەندی</a>
-        <a href="#">پرسیارێت زێدە</a>
-        <a href="#">بلۆگ</a>
+        <h4 data-i18n="footer-links-title">گەهاندن</h4>
+        <a href="#plans" data-i18n="nav-plans">پلان</a>
+        <a href="#features" data-i18n="nav-features">تایبەتمەندی</a>
+        <a href="#blog" data-i18n="nav-blog">بلۆگ</a>
       </div>
       <div class="footer-col">
-        <h4>یاسایی</h4>
-        <a href="#">مەرجێت بکارئینانێ</a>
-        <a href="#">پاراستنا تایبەتی</a>
-        <a href="#">پەیوەندی</a>
+        <h4 data-i18n="footer-legal-title">یاسایی</h4>
+        <a href="#" data-i18n="legal-terms">مەرجێت بکارئینانێ</a>
+        <a href="#" data-i18n="legal-privacy">پاراستنا تایبەتی</a>
       </div>
     </div>
     <p class="copyright">© 2026 LinguaX-Ai. هەموو مافێت پاراستی.</p>
   </footer>
 
-  <!-- مۆدالا بەرفرەهی یا ٥٠ خالان -->
+  <!-- مۆدالا خۆماڵی یا لۆگین / ئەکاونت -->
+  <div class="modal-overlay" id="authModal">
+    <div class="modal-content neumorph">
+      <button class="modal-close" id="closeAuthModal">&times;</button>
+      <div class="modal-icon">👤</div>
+      <h2 id="authModalTitle">دروستکرنا ئەکاونتی</h2>
+      <div class="auth-form">
+        <input type="text" id="authUsername" placeholder="ناڤێ تە" class="neumorph-inset input-field">
+        <input type="email" id="authEmail" placeholder="ئیمێل" class="neumorph-inset input-field">
+        <button id="authSubmitBtn" class="btn-primary btn-block">تۆماربوون</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- مۆدالا ٥٠ خالان -->
   <div class="modal-overlay" id="featureModal">
     <div class="modal-content neumorph">
       <button class="modal-close" id="closeModal">&times;</button>
@@ -259,36 +305,37 @@
     </div>
   </div>
 
-  <!-- Schema JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "LinguaX-Ai",
-    "url": "https://linguax.ai",
-    "logo": "https://linguax.ai/favicon.svg",
-    "description": "فێربوونا زمانان ب ئاستێ لوتکەیی، ب AI-یێ کەسایەتی کر و چاندەکا تەواو",
-    "sameAs": [
-      "https://twitter.com/linguaxai",
-      "https://facebook.com/linguaxai",
-      "https://instagram.com/linguaxai"
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "LinguaX-Ai",
-    "url": "https://linguax.ai",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://linguax.ai/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
+  <!-- مۆدالا پارەدانێ يا گشتگیر -->
+  <div class="modal-overlay" id="paymentModal">
+    <div class="modal-content neumorph">
+      <button class="modal-close" id="closePaymentModal">&times;</button>
+      <div class="modal-icon">💳</div>
+      <h2 data-i18n="pay-title">گەهاندنا پۆڵا پێشکەفتی</h2>
+      <p class="payment-subtitle" data-i18n="pay-sub">ڕێکا پارەدانێ یا گونجایی هەڵبژێره:</p>
+      
+      <div class="payment-methods-grid">
+        <div class="payment-method-card neumorph" data-method="fib">
+          <span class="pay-icon">🏦</span>
+          <h4>FIB Bank</h4>
+          <p>ب ڕێیا ئەپلیکەیشنا FIB</p>
+        </div>
+        <div class="payment-method-card neumorph" data-method="fastpay">
+          <span class="pay-icon">📱</span>
+          <h4>FastPay</h4>
+          <p>ب ڕێیا ژمارا مۆبایلێ</p>
+        </div>
+        <div class="payment-method-card neumorph" data-method="usdt">
+          <span class="pay-icon">🪙</span>
+          <h4>USDT (TRC20)</h4>
+          <p>کڕپتۆ جیهانی</p>
+        </div>
+      </div>
 
+      <div id="payment-details-area" class="payment-details-area neumorph-inset" style="display:none;"></div>
+    </div>
+  </div>
+
+  <!-- Three.js Module Setup -->
   <script type="importmap">
     {
       "imports": {
