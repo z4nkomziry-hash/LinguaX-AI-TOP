@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="LinguaX-Ai - فێربوونا زمانان ب ئاستێ لوتکەیی، ب AI-یێ کەسایەتی کر و چاندەکا تەواو">
+  <title>LinguaX-Ai | فێربوونا زمانان ب ئاستێ گۆپیتکی</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+  <!-- ناڤبارا شووشەیی -->
+  <header class="navbar glass">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-icon">🌐</span>
+        <span class="logo-text">LinguaX<span class="highlight">-Ai</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="#plans" class="nav-link">پلان</a>
+        <a href="#features" class="nav-link">تایبەتمەندی</a>
+        <a href="#" class="nav-link">دەربارە</a>
+        <button id="theme-toggle" class="btn-icon" aria-label="گۆڕینی مۆد">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+        <button class="btn-primary btn-sm">دەستپێکە</button>
+      </nav>
+      <button class="hamburger" aria-label="مینو">☰</button>
+    </div>
+  </header>
+
+  <!-- سێکشنا هێرۆ + 3D Globe -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        زمانان <span class="gradient-text">ب ئاستێ لوتکەیی</span> فێربە
+      </h1>
+      <p class="hero-desc">
+        ئەزموونەکا کەسایەتی کر یا فێربوونێ ب هاریکاریا AI-یێ پێشکەفتی. ژ Duolingo بلندتر، هەر زمان عالەمەک.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn-primary btn-lg">بەلاش دەستپێکە</button>
+        <button class="btn-outline btn-lg">پلانێت مە بینە</button>
+      </div>
+    </div>
+    <div class="globe-container" id="globe-container">
+      <!-- 3D Globe dê bi JavaScript were barkirin -->
+    </div>
+    <div class="floating-avatars">
+      <div class="avatar a1">🤖</div>
+      <div class="avatar a2">🗣️</div>
+      <div class="avatar a3">🌍</div>
+    </div>
+  </section>
+
+  <!-- سێکشنا تایبەتمەندیێت AI -->
+  <section id="features" class="features">
+    <h2 class="section-title">چی دکەت <span class="gradient-text">LinguaX-Ai</span> تایبەت؟</h2>
+    <div class="features-grid">
+      <div class="feature-card neumorph">
+        <div class="feature-icon">🧠</div>
+        <h3>AI Tutor X</h3>
+        <p>مامۆستایەکێ AI-یێ تایبەت بۆ هەر قوتابیەکێ. صحبەتدکەت، شاشیا ڕاستدکەت، و ڕێبەرییا تە دکەت.</p>
+      </div>
+      <div class="feature-card neumorph">
+        <div class="feature-icon">🎯</div>
+        <h3>Adaptive Learning 3.0</h3>
+        <p>ئاست، شێوازێ فێربوونێ، دەمێ ئەدایێ باشتر، و تەنانەت رۆحێ تە یێ دەروونی دزانیت و خۆ ل گۆرەی وێ ڕێکدخەت.</p>
+      </div>
+      <div class="feature-card neumorph">
+        <div class="feature-icon">✨</div>
+        <h3>Generative Practice</h3>
+        <p>هەر وەرزشەک نەوی و ئۆریژینالە، ب AI-یێ بەرهەمهاتی. چیڕۆک، دیالۆگ، سیناریۆیێت واقعی.</p>
+      </div>
+      <div class="feature-card neumorph">
+        <div class="feature-icon">🌍</div>
+        <h3>Culture Lab</h3>
+        <p>زمان د ناڤ چاندێ دا – فیلم، موزیک، خوارن، یاری. پتر ژ ژبەرکرنەکا بێ ڕوح.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- سێکشنا پلانێت بەلاش، پڵاس، پریمیوم -->
+  <section id="plans" class="plans">
+    <h2 class="section-title">پلانێت <span class="gradient-text">بهایێت گونجایی</span></h2>
+    <div class="plans-grid">
+      <!-- پلانێ بەلاش -->
+      <div class="plan-card neumorph">
+        <div class="plan-badge">بەلاش</div>
+        <h3>🆓 دەستپێکەر</h3>
+        <div class="price">0$ <span>/مانگ</span></div>
+        <ul class="plan-features">
+          <li>✅ ڕۆژانە ٣ دەرس</li>
+          <li>✅ AI Tutor سنووردار (١٠ هەول/ڕۆژ)</li>
+          <li>✅ دەستپێکرنا زمانەکێ</li>
+          <li>✅ یارییێت سادە</li>
+          <li>❌ بێ ریکلامێت ڤیدیۆیی</li>
+        </ul>
+        <button class="btn-primary btn-block">بەلاش دەستپێکە</button>
+      </div>
+
+      <!-- پلانێ Plus -->
+      <div class="plan-card neumorph popular">
+        <div class="plan-badge popular-badge">پڕفرۆشترین</div>
+        <h3>⭐ Plus</h3>
+        <div class="price">4.99$ <span>/مانگ</span></div>
+        <ul class="plan-features">
+          <li>✅ هەمی تایبەتمەندیێت بەلاش</li>
+          <li>✅ دەرس و وەرزش بێ سنوور</li>
+          <li>✅ AI Tutor بێ سنوور (دەمێ ڕاست)</li>
+          <li>✅ ٣ زمانان هەمان دەم</li>
+          <li>✅ مۆدیێت تایبەت: گەشتا زمانی، کاروبار</li>
+          <li>✅ بێ ریکلام</li>
+        </ul>
+        <button class="btn-primary btn-block">Plus بگەهینە</button>
+      </div>
+
+      <!-- پلانێ Premium -->
+      <div class="plan-card neumorph">
+        <div class="plan-badge">پریمیوم</div>
+        <h3>👑 Premium</h3>
+        <div class="price">9.99$ <span>/مانگ</span></div>
+        <ul class="plan-features">
+          <li>✅ هەمی تایبەتمەندیێت Plus</li>
+          <li>✅ Human Coaching (ڤیدیۆ کۆڵ)</li>
+          <li>✅ زمانێت تایبەت (کوردی، عەرەبی ئەندەلوسی...)</li>
+          <li>✅ Culture Lab تەواو</li>
+          <li>✅ بەلگەنامەیێت بەها (CEFR)</li>
+        </ul>
+        <button class="btn-primary btn-block">Premium بگەهینە</button>
+      </div>
+    </div>
+    <p class="plans-note">💳 هەموو پلانان دەستپێکرنەکا ٧ ڕۆژان بێ بەرامبەر پێشکێشدکەن. هەر دەم پاشەکشێ بکە.</p>
+  </section>
+
+  <!-- سێکشنا دەعوەت -->
+  <section class="cta">
+    <div class="cta-content neumorph-inset">
+      <h2>ئامادەی بۆ شۆڕشا فێربوونا زمانان؟</h2>
+      <p>ئەمڕۆ بەشدار بە و ببنە خێزانەکا زمانڤانان یا جیهانی.</p>
+      <button class="btn-primary btn-lg">بەلاش دەستپێکە</button>
+    </div>
+  </section>
+
+  <!-- فوتر -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3>LinguaX-Ai</h3>
+        <p>فێربوونا زمانان ب ئاستێ گۆپیتکی. ژ ٢٠٢٦ و پاشی.</p>
+      </div>
+      <div class="footer-col">
+        <h4>گەهاندن</h4>
+        <a href="#">پلان</a>
+        <a href="#">تایبەتمەندی</a>
+        <a href="#">پرسیارێت زێدە</a>
+      </div>
+      <div class="footer-col">
+        <h4>یاسایی</h4>
+        <a href="#">مەرجێت بکارئینانێ</a>
+        <a href="#">پاراستنا تایبەتی</a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 LinguaX-Ai. هەموو مافێت پاراستی.</p>
+  </footer>
+
+  <!-- Three.js CDN -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.126.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.126.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
