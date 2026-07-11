@@ -21,6 +21,7 @@
       <nav class="nav-links">
         <a href="#plans" class="nav-link">پلان</a>
         <a href="#features" class="nav-link">تایبەتمەندی</a>
+        <a href="#fifty-features" class="nav-link">٥٠ خاڵ</a>
         <a href="#" class="nav-link">دەربارە</a>
         <button id="theme-toggle" class="btn-icon" aria-label="گۆڕینی مۆد">
           <span class="icon-sun">☀️</span>
@@ -87,7 +88,6 @@
   <section id="plans" class="plans">
     <h2 class="section-title">پلانێت <span class="gradient-text">بهایێت گونجایی</span></h2>
     <div class="plans-grid">
-      <!-- پلانێ بەلاش -->
       <div class="plan-card neumorph">
         <div class="plan-badge">بەلاش</div>
         <h3>🆓 دەستپێکەر</h3>
@@ -102,7 +102,6 @@
         <button class="btn-primary btn-block">بەلاش دەستپێکە</button>
       </div>
 
-      <!-- پلانێ Plus -->
       <div class="plan-card neumorph popular">
         <div class="plan-badge popular-badge">پڕفرۆشترین</div>
         <h3>⭐ Plus</h3>
@@ -118,7 +117,6 @@
         <button class="btn-primary btn-block">Plus بگەهینە</button>
       </div>
 
-      <!-- پلانێ Premium -->
       <div class="plan-card neumorph">
         <div class="plan-badge">پریمیوم</div>
         <h3>👑 Premium</h3>
@@ -134,6 +132,29 @@
       </div>
     </div>
     <p class="plans-note">💳 هەموو پلانان دەستپێکرنەکا ٧ ڕۆژان بێ بەرامبەر پێشکێشدکەن. هەر دەم پاشەکشێ بکە.</p>
+  </section>
+
+  <!-- سێکشنا ٥٠ خاڵێت شۆڕشگێر -->
+  <section id="fifty-features" class="fifty-features">
+    <h2 class="section-title">٥٠ خاڵێت <span class="gradient-text">شۆڕشگێر</span> کو کەسێ نەدیتینە</h2>
+    <p class="section-subtitle">هەر خالەک پەنجەرەیەکە بۆ ئایندەیا فێربوونێ. پێداگرتنەکا تایبەت بۆ هەر زمانەکێ.</p>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">هەمی</button>
+      <button class="filter-btn" data-filter="neuro">🧠 NeuroLingua</button>
+      <button class="filter-btn" data-filter="twin">👤 Twin</button>
+      <button class="filter-btn" data-filter="geno">🧬 GenoLang</button>
+      <button class="filter-btn" data-filter="dream">🌙 خەون</button>
+      <button class="filter-btn" data-filter="economy">💰 ئابووری</button>
+      <button class="filter-btn" data-filter="unspoken">🗣️ نەخوازگر</button>
+      <button class="filter-btn" data-filter="hybrid">🚀 تێکەل</button>
+    </div>
+
+    <div class="features-grid-fifty" id="featuresGrid"></div>
+
+    <div class="load-more-container">
+      <button id="loadMoreBtn" class="btn-outline">زێدەتر نیشاندە (٢٠+ چالاک)</button>
+    </div>
   </section>
 
   <!-- سێکشنا دەعوەت -->
